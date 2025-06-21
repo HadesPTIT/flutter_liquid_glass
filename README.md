@@ -1,16 +1,37 @@
-# flutter_liquid_glass
+## Flutter Custom Fragment Shaders - Liquid glass
 
-A new Flutter project.
+https://github.com/user-attachments/assets/ee6d54e9-0188-4260-a096-682bec62a796
 
-## Getting Started
+### Introduction
 
-This project is a starting point for a Flutter application.
+Fragment shaders in Flutter allow you to create stunning visual effects by writing code that runs directly on the GPU. This guide will walk you through creating a liquid glass effect with touch interaction, explaining every step of the process.
 
-A few resources to get you started if this is your first Flutter project:
+### What are Fragment Shaders?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Fragment shaders are small programs that run on the GPU to determine the color of each pixel on the screen. Unlike traditional Flutter widgets that are computed on the CPU, shaders leverage the parallel processing power of graphics cards for smooth, complex visual effects. Shaders have many benefits:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Performance: GPU parallel processing
+* Visual Quality: Complex effects impossible with widgets
+* Smooth Animation: 60+ FPS even with complex calculations
+* Creative Freedom: Unlimited visual possibilities
+
+### How Shaders Work
+
+```
+Flutter Widget Tree → Skia/Impeller Rendering → GPU → Fragment Shader → Final Pixels
+
+```
+
+1. Widget Layer: Flutter builds widget tree
+2. Skia Layer: Converts to drawing commands
+3. GPU Layer: Executes shader for each pixel
+4. Output: Final rendered frame
+
+### References
+
+- [Flutter Shaders Documentation](https://docs.flutter.dev/ui/design/graphics/fragment-shaders)
+
+- [Flutter Build Show - Custom Fragment Shaders](https://www.youtube.com/watch?v=OpcPZdfJbq8)
+
+- [Flutter liquid glass update plan](https://github.com/flutter/flutter/issues/170310#issuecomment-2959275864)
+
